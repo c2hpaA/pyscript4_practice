@@ -22,16 +22,17 @@
 
 <p>output</p>
 
-<p id="output_text"></p>
+<p id="output"></p>
 </body>
 
 <py-script>
 input_text1=Element("input_text")
-op=Element("ouput_text")
+op=Element("ouput")
 
 def count(*args, **kwargs):
-    number = len(input_text1.value)
+    number = len(input_text.value)
     op.write(number)
+
 
 
 def clear(*arg,**kwargs):
