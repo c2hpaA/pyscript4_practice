@@ -29,11 +29,14 @@
 input_text=Element("input_text")
 ouput_text=Element("ouput_text")
 
-def clear(*arg,**kwargs):
-    input_text.clear()
 def count(*arg,**kwargs):
     number=len(input_text.value)
     op.write(number)
+
+
+def clear(*arg,**kwargs):
+    input_text.clear()
+
 
 </py-script>
 
