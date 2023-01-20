@@ -18,9 +18,23 @@
 <textarea name="input_text" id="input_text" placeholder="Enter your text..."></textarea>
 <br>
 <button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
+<!--不只有count要定義，clear也要，否則pys-onClick="clear"找不到函示會出錯-->
 <button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
 
+<p>output</p>
+<p id="output_text"></p>
 </body>
 
+<py-script>
+input_text=Element("input_text")
+ouput_text=Element("ouput_text")
+
+def clear(*arg,**kwargs):
+    input_text.clear()
+def count(*arg,**kwargs):
+    number=len(input_text)
+    op.write(number)
+
+</py-script>
 
 </html>
