@@ -22,7 +22,7 @@
             <option value="Korea">Korea</option>
         
         </select>
-        <input id="submit" type="submit" pys-onClick="submit" value="submit">submit</input>
+        <input id="submit" type="submit" pys-onClick="submit" value="submit"></input>
 
 
     
@@ -32,18 +32,19 @@
     </form>
     <p>output:</p>
     <p id="output"></p>
-
+    
+    <pyscript>
+        def submit(*arg,**kwargs):
+            result=Element("output")
+            result.write(f"Hello! {Element("name").value} from {Element("countries").value}")
+    
+    
+    
+    </pyscript>
 
 
 </body>
-<pyscript>
-    def submit(*arg,**kwargs):
-        result=Element("output")
-        result.write(f"Hello! {Element("name").value} from {Element("countries").value}")
 
-
-
-</pyscript>
 
 
 
