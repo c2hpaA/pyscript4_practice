@@ -10,24 +10,24 @@
 
 </head>
 <body>
-<h1>DOM manpulation</h1>
-<h2>string counter</h2>  
-<br>
-<p>input</p>
-<textarea name="input_text" id="input_text" placeholder="Enter your text..."></textarea>
-<br>
-<button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
-<!--不只有count要定義，clear也要，否則pys-onClick="clear"找不到函示會出錯-->
-<button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
+    <h1>DOM manpulation</h1>
+    <h2>string counter</h2>  
+    <br>
+    <p>input</p>
+    <textarea name="input_text" id="input_text" placeholder="Enter your text..."></textarea>
+    <br>
+    <button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
+    <!--不只有count要定義，clear也要，否則pys-onClick="clear"找不到函示會出錯-->
+    <button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
 
-<p>output</p>
+    <p>output</p>
 
-<p id="output"></p>
+    <p id="output"></p>
 </body>
 
 <py-script>
 input_text1=Element("input_text")
-op=Element("ouput")
+op=Element("output")
 
 def count(*args, **kwargs):
     number = len(input_text1.value)
