@@ -24,7 +24,7 @@
     from pyodide.http import open_url
     df=pd.read_csv(open_url("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/diamonds.csv"))
     csv=Element("csv")
-    csv.write(df.shape)
+    csv.write(df.info())
 
 
 
