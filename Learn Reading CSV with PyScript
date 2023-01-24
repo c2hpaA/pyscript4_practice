@@ -1,1 +1,33 @@
+<html>
+<head>
+    <title> reag CSV with PyScript </title>
 
+    <link rel='stylesheet' type='text/css' media='screen' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+
+    
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <!---pyodide-->>
+    <py-env>
+        - pandas
+    </py-env>
+</head>
+<body>
+    <h1>reag CSV with PyScript</h1>
+    <br>
+    <p id="csv"></p>
+</body>
+
+<py-script>
+    import pandas as pd
+    from pyodide.http import open_url
+    df=pd.read_csv(open_url("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/diamonds.csv"))
+    csv=Element("csv")
+    csv.write(df.shape)
+
+
+
+</py-script>
+
+</html>
